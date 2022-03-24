@@ -1,0 +1,468 @@
+//colors
+$blue: #3b5f74;
+$lightblue: #f3f6f9;
+$white: #ffffff;
+$grey: #747887;
+$lightgrey: #e5e4e1;
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+}
+.form__header {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  &__item {
+    flex: 0 1 50%;
+    &.image__item {
+      background: url("../img/ivana-cajina-dnL6ZIpht2s-unsplash.jpg") center /
+        cover no-repeat;
+    }
+    &.info__item {
+      padding: 65px 100px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+.logo {
+  padding-bottom: 60px;
+  max-width: 200px;
+  img {
+    width: 100%;
+  }
+}
+.section {
+  &__title {
+    font-weight: 494;
+    font-size: 50px;
+    line-height: 56px;
+    margin-bottom: 0;
+    color: $blue;
+    margin-top: 60px;
+  }
+  &__text {
+    font-weight: 375;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+    color: $grey;
+    max-width: 600px;
+  }
+}
+.btn {
+  background: $blue;
+  color: $white;
+  padding: 18px 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  max-width: fit-content;
+  font-style: normal;
+  font-weight: 494;
+  font-size: 22px;
+  line-height: 24px;
+  border: 1px;
+  svg {
+    transition: 0.3s all ease;
+  }
+  &:hover {
+    background: #6f9eba;
+    transition: 0.3s all ease;
+    svg {
+      transform: translateX(10px);
+    }
+  }
+}
+.btn__outline {
+  padding: 18px 48px;
+  border: 1px solid $lightgrey;
+  color: $blue;
+  background-color: $white;
+  font-style: normal;
+  font-weight: 494;
+  font-size: 22px;
+  line-height: 24px;
+  &:hover {
+    background: $blue;
+    transition: 0.3s all ease;
+    color: $white;
+  }
+}
+.header__btn {
+  margin-top: 40px;
+  padding: 18px 30px;
+}
+
+.link {
+  width: 238px;
+  height: 22px;
+  left: 1060px;
+  top: 858px;
+  color: $grey;
+  a {
+    color: $blue;
+  }
+}
+main {
+  padding: 50px 200px;
+}
+.steps {
+  &__numbers {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 650px;
+  }
+  &__form {
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: $lightgrey;
+  z-index: -1;
+  &__success {
+  }
+}
+
+.step {
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $lightgrey;
+    margin-right: 100px;
+    flex-shrink: 0;
+    background: $white;
+    
+  }
+  &__buttons {
+    margin-top: 80px;
+    gap: 20px;
+    display: flex;
+  }
+}
+.form {
+  &__step {
+      display: none;
+    &.active{
+        display: inline;
+    }
+  }
+  &__item {
+    margin-top: 40px;
+  }
+  &__item {
+    &__title {
+      font-style: normal;
+      font-weight: 494;
+      font-size: 25px;
+      line-height: 28px;
+      color: $blue;
+    }
+  }
+  &__input {
+    display: flex;
+    position: relative;
+    border: 1px solid $lightgrey;
+    max-width: 460px;
+    &.search__input {
+      margin-top: 40px;
+    }
+  }
+}
+.button {
+}
+.prev {
+  &__step {
+  }
+}
+.next {
+  &__step {
+  }
+}
+.input {
+  padding: 20px 20px 20px 65px;
+  border: none;
+  width: 100%;
+  outline: none;
+  font-style: normal;
+  font-weight: 375;
+  font-size: 18px;
+  line-height: 20px;
+
+  &:focus {
+    outline: 1px solid $blue;
+  }
+  &__img {
+    position: absolute;
+    left: 30px;
+    top: 15%;
+    transform: translate(0, 50%);
+  }
+}
+//radio
+
+.radio {
+  &__item {
+    display: flex;
+    max-width: 360px;
+    padding: 20px;
+    background: $lightblue;
+    align-items: center;
+    max-height: 30px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+  &__input {
+    display: none;
+
+    &:checked + .fake:after {
+      opacity: 1;
+    }
+    &:checked ~ .border {
+      opacity: 1;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+//checkbox
+.checkboxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.interests {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+.checkbox {
+  &__item {
+    display: flex;
+    max-width: 360px;
+    padding: 20px;
+    background: $lightblue;
+    align-items: center;
+    max-height: 30px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+  &__interest {
+    display: flex;
+    max-width: 125px;
+    padding: 15px 24px;
+    border: 1px solid $lightgrey;
+    align-items: center;
+    max-height: 30px;
+    position: relative;
+    width: fit-content;
+    margin-top: 20px;
+    gap: 10px;
+    .text{
+        font-size: 18px;
+        margin: 0;
+    }
+  }
+  &__input {
+    display: none;
+
+    &:checked ~ .fake-checkbox:after {
+      opacity: 1;
+    }
+    &:checked ~ .border {
+      opacity: 1;
+    }
+    
+  }
+}
+.fake-checkbox{
+    width: 30px;
+    height: 30px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    margin-left: auto;
+    position: relative;
+    &:after{
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        background: $blue url(../img/check.svg) no-repeat;
+        background-position: center;
+        opacity: 0;
+    }
+}
+.border {
+  position: absolute;
+  border: 1px solid $blue;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+}
+.fake {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid $blue;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+  &:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: $blue;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+.text {
+  font-style: normal;
+  font-weight: 495;
+  font-size: 20px;
+  margin-left: 30px;
+  color: $blue;
+}
+.img {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+//file uploader
+
+.file{
+    &__uploader{
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    &__uploader-item{
+        width: 360px;
+        height: 360px;
+        display: flex;
+        position: relative;
+        
+    }
+    &__label{
+        display: flex;
+        height: 360px;
+        width: 360px;
+        position: relative;
+        background: $lightblue;
+        border: 2px dashed $blue;
+        cursor: pointer;
+    }
+    &__input{
+        opacity: 0;
+    }
+    &__item{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item-img{
+        
+    }
+    &__item-text{
+        font-style: normal;
+        font-weight: 494;
+        font-size: 20px;
+        line-height: 22px;
+        color: $blue;
+        margin-top: 30px;
+    }
+}
+.profile{
+    &__input{
+        display: flex;
+        width: 100%;
+        &:first-child{
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .input{
+            width: 100%;
+            display: flex;
+        }
+    }
+}
+//finish
+
+.finish{
+    display: none;
+    &__logo{
+        margin-top: 50px;
+    }
+    &__title{
+        font-weight: 494;
+        font-size: 50px;
+        line-height: 56px;
+        color: $blue;
+        margin-top: 40px;
+    }
+    &__subtitle{
+        font-style: normal;
+        font-weight: 494;
+        font-size: 25px;
+        line-height: 28px;
+        color: $blue;
+        margin-top: 15px;
+    }
+    &__text{
+        font-style: normal;
+        font-weight: 375;
+        font-size: 20px;
+        line-height: 22px;
+        color: $grey;
+        margin-top: 10px;
+    }
+    &__btn{
+        margin-top: 60px;
+    }
+}
