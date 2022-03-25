@@ -1,3 +1,7 @@
+//media
+@media (max-width: 767px) {}
+@media (max-width: 992px) {}
+@media (max-width: 1200px) {}
 //colors
 $blue: #3b5f74;
 $lightblue: #f3f6f9;
@@ -9,6 +13,7 @@ a {
 }
 body {
   margin: 0;
+  max-width: 1120px;
 }
 .form__header {
   display: flex;
@@ -17,21 +22,35 @@ body {
   overflow: hidden;
   &__item {
     flex: 0 1 50%;
+    @media (max-width: 638px) {
+        flex: none;
+    }
     &.image__item {
       background: url("../img/ivana-cajina-dnL6ZIpht2s-unsplash.jpg") center /
         cover no-repeat;
+        @media (max-width: 638px) {
+            display: none;
+        }
     }
     &.info__item {
       padding: 65px 100px 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    
+      @media (max-width: 767px) {
+        padding: 15px 50px 10px;
+      }
     }
   }
 }
 .logo {
   padding-bottom: 60px;
   max-width: 200px;
+  @media (max-width: 767px) {
+    padding: 40px;
+    max-width: 150px;
+    }
   img {
     width: 100%;
   }
@@ -44,6 +63,9 @@ body {
     margin-bottom: 0;
     color: $blue;
     margin-top: 60px;
+    @media (max-width: 767px) {
+        font-size: 40px;
+    }
   }
   &__text {
     font-weight: 375;
@@ -67,6 +89,12 @@ body {
   font-size: 22px;
   line-height: 24px;
   border: 1px;
+  @media (max-width: 638px) {
+    font-size: 18px;
+    }
+  @media (max-width: 767px) {
+    font-size: 20px;
+}
   svg {
     transition: 0.3s all ease;
   }
@@ -110,6 +138,12 @@ body {
 }
 main {
   padding: 50px 200px;
+  height: 100vh;
+  width: 100%;
+  @media (max-width: 934px) {
+    padding: 50px 30px;
+    width: 80%;
+    }
 }
 .steps {
   &__numbers {
@@ -119,6 +153,7 @@ main {
     max-width: 650px;
   }
   &__form {
+      width: 100%;
   }
 }
 
@@ -146,6 +181,15 @@ main {
     margin-right: 100px;
     flex-shrink: 0;
     background: $white;
+    @media (max-width: 934px) {
+        width: 35px;
+        height: 35px;;
+    }
+    @media (max-width: 734px) {
+        width: 25px;
+        height: 25px;
+    }
+
     
   }
   &__buttons {
@@ -377,12 +421,22 @@ main {
         width: 100%;
         gap: 30px;
         margin-top: 40px;
+        @media (max-width: 934px) {
+            flex-wrap: wrap;
+         }
+         @media (max-width: 534px) {
+            justify-content: center;
+         }
     }
     &__uploader-item{
         width: 360px;
         height: 360px;
         display: flex;
         position: relative;
+        @media (max-width: 934px) {
+            width: 200px;
+            height: 200px;
+            }
         
     }
     &__label{
@@ -393,6 +447,11 @@ main {
         background: $lightblue;
         border: 2px dashed $blue;
         cursor: pointer;
+        @media (max-width: 934px) {
+            width: 200px;
+            height: 200px;
+            
+            }
     }
     &__input{
         opacity: 0;
@@ -436,6 +495,7 @@ main {
 
 .finish{
     display: none;
+    flex-direction: column;
     &__logo{
         margin-top: 50px;
     }

@@ -13,7 +13,7 @@ $('.next__step').click(function () {
         $('.form__step').eq(cur+1).addClass('active');
     }
     else if(cur!=$('.form__step').is(":last-child")){
-        $('.finish').css('display', 'inline')
+        $('.finish').css('display', 'flex')
         $('.steps__form').css('display', 'none')
     }
 });

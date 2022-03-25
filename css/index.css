@@ -4,6 +4,7 @@ a {
 
 body {
   margin: 0;
+  max-width: 1120px;
 }
 
 .form__header {
@@ -21,8 +22,22 @@ body {
           flex: 0 1 50%;
 }
 
+@media (max-width: 638px) {
+  .form__header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
 .form__header__item.image__item {
   background: url("../img/ivana-cajina-dnL6ZIpht2s-unsplash.jpg") center/cover no-repeat;
+}
+
+@media (max-width: 638px) {
+  .form__header__item.image__item {
+    display: none;
+  }
 }
 
 .form__header__item.info__item {
@@ -39,9 +54,22 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 767px) {
+  .form__header__item.info__item {
+    padding: 15px 50px 10px;
+  }
+}
+
 .logo {
   padding-bottom: 60px;
   max-width: 200px;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    padding: 40px;
+    max-width: 150px;
+  }
 }
 
 .logo img {
@@ -55,6 +83,12 @@ body {
   margin-bottom: 0;
   color: #3b5f74;
   margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .section__title {
+    font-size: 40px;
+  }
 }
 
 .section__text {
@@ -85,6 +119,18 @@ body {
   font-size: 22px;
   line-height: 24px;
   border: 1px;
+}
+
+@media (max-width: 638px) {
+  .btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn {
+    font-size: 20px;
+  }
 }
 
 .btn svg {
@@ -140,6 +186,15 @@ body {
 
 main {
   padding: 50px 200px;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 934px) {
+  main {
+    padding: 50px 30px;
+    width: 80%;
+  }
 }
 
 .steps__numbers {
@@ -151,6 +206,10 @@ main {
           align-items: center;
   position: relative;
   max-width: 650px;
+}
+
+.steps__form {
+  width: 100%;
 }
 
 .progress {
@@ -181,6 +240,20 @@ main {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: #ffffff;
+}
+
+@media (max-width: 934px) {
+  .step__number {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 734px) {
+  .step__number {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .step__buttons {
@@ -452,6 +525,21 @@ main {
   margin-top: 40px;
 }
 
+@media (max-width: 934px) {
+  .file__uploader {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 534px) {
+  .file__uploader {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .file__uploader-item {
   width: 360px;
   height: 360px;
@@ -459,6 +547,13 @@ main {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+@media (max-width: 934px) {
+  .file__uploader-item {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .file__label {
@@ -471,6 +566,13 @@ main {
   background: #f3f6f9;
   border: 2px dashed #3b5f74;
   cursor: pointer;
+}
+
+@media (max-width: 934px) {
+  .file__label {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .file__input {
@@ -525,6 +627,10 @@ main {
 
 .finish {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .finish__logo {
