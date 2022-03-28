@@ -185,9 +185,8 @@ body {
 }
 
 main {
-  padding: 50px 200px;
-  height: 100vh;
-  width: 100%;
+  padding: 50px 30px;
+  width: 80%;
 }
 
 @media (max-width: 934px) {
